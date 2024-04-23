@@ -1,4 +1,4 @@
-import { products } from "../API/products.js"
+import { products } from "../API_DATA/products.js"
 
 export const getProducts = async (req, res) => {
   res.json(products)

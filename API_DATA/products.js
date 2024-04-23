@@ -1,5 +1,5 @@
 import { fillProductRating } from "../utils/ramdomRating.js"
-import { clients, comments } from "../API/rating.js"
+import { clients, comments } from "../API_DATA/rating.js"
 
 export const products = [
   {
