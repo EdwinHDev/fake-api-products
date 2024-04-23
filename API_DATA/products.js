@@ -4,8 +4,7 @@ import dotenv from "dotenv"
 
 dotenv.config()
 
-const port = process.env.PORT;
-const baseUrl = `${process.env.BASE_URL}:${port}`;
+const baseUrl = process.env.BASE_URL;
 
 export const products = [
   {
