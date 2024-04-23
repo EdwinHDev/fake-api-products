@@ -9,18 +9,15 @@ export function fillProductRating(clientList, comments) {
     star_5: []
   }
 
-  const randoNumber = Math.floor(Math.random() * 50) + 1
+  const randomNumber = Math.floor(Math.random() * 50) + 1
 
-  for (let i = 0; i < randoNumber; i++) {
-    const estrella = Math.floor(Math.random() * 5) + 1
-    const cliente = {
-      _id: `${estrella}-${i}`,
-      name: clientList[Math.floor(Math.random() * clientList.length)]
-    }
+  for (let i = 0; i < randomNumber; i++) {
+    const start = Math.floor(Math.random() * 5) + 1
+    const client = {_id: `${start}-${i}`, name: clientList[Math.floor(Math.random() * clientList.length)]}
     const comment = comments[Math.floor(Math.random() * comments.length)]
-    const fecha = generateRandomDate()
-    const ratingStar = { client: cliente, comment: comment, date: fecha }
-    switch (estrella) {
+    const date = generateRandomDate()
+    const ratingStar = { client: client, comment: comment, date: date }
+    switch (start) {
       case 1:
         rating.star_1.push(ratingStar)
         break

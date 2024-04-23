@@ -107,4 +107,51 @@ export const products = [
     rating: fillProductRating(clients, comments),
     status: "publicado",
   },
+  {
+    _id: uuidv4(),
+    category: "Accesorios",
+    characteristics: [
+      {
+        id: uuidv4(),
+        name: "Tipo de tejido",
+        value: "Cuero vegano"
+      },
+      {
+        id: uuidv4(),
+        name: "Tipo de cierre",
+        value: "Cremallera"
+      },
+      {
+        id: uuidv4(),
+        name: "Marca",
+        value: "KKXIU"
+      },
+      {
+        id: uuidv4(),
+        name: "Color",
+        value: "Rosa"
+      },
+    ],
+    condition: "nuevo",
+    description: "3 compartimentos y amplio diseño abierto: haz que este bolso de tamaño mediano tenga una mayor capacidad y mantenga tus cosas bien organizadas y seguras. Además, te ayuda a encontrar cosas mucho más fáciles.",
+    freeShipping: true,
+    images: [
+      `${baseUrl}/images/products/714D+F27X2L._AC_SY575_.jpg`,
+      `${baseUrl}/images/products/71G6qcZ38VL._AC_SY575_.jpg`,
+      `${baseUrl}/images/products/61IW-6gEUOL._AC_SY575_.jpg`,
+      `${baseUrl}/images/products/71sSdX7bKeL._AC_SY575_.jpg`,
+      `${baseUrl}/images/products/61G4mh-5vtL._AC_SY575_.jpg`,
+      `${baseUrl}/images/products/71Z+-jbtA4L._AC_SY575_.jpg`
+    ],
+    name: "KKXIU Monederos y bolsos de mano con triple compartimento para mujer, bolso de mano con asa superior",
+    price: 30.99,
+    stock: 7,
+    subCategories: [
+      { name: "Carteras" }
+    ],
+    companyName: "Siempre lindos",
+    discount: 10,
+    rating: fillProductRating(clients, comments),
+    status: "publicado",
+  },
 ]
