@@ -243,4 +243,41 @@ export const products = [
     rating: fillProductRating(clients, comments),
     status: "publicado",
   },
+  {
+    _id: uuidv4(),
+    category: "Ropa",
+    characteristics: [
+      {
+        id: uuidv4(),
+        name: "Tipo de tejido",
+        value: "100% poliéster"
+      },
+      {
+        id: uuidv4(),
+        name: "Cuidados",
+        value: "Lavado a Máquina"
+      },
+    ],
+    condition: "nuevo",
+    description: "Overoles de manga larga para mujer 2024/cuello en V para mujer, pantalones largos, overoles de vestir con cinturón, overol de una pieza para mujer, overol casual para mujer, ropa de otoño para mujer 2024/elegantes trajes de profesor para mujer, mameluco con bolsillos",
+    freeShipping: true,
+    images: [
+      `${baseUrl}/images/products/61dtJYCZwML._AC_SY550_.jpg`,
+      `${baseUrl}/images/products/71qeUf6QEFL._AC_SY500_.jpg`,
+      `${baseUrl}/images/products/71I2Gm2Y92L._AC_SY500_.jpg`,
+      `${baseUrl}/images/products/71Vi99KRuhL._AC_SY500_.jpg`, 
+      `${baseUrl}/images/products/81aMtAxFsIL._AC_SY500_.jpg`,
+      `${baseUrl}/images/products/710x78qzpyL._AC_SY500_.jpg`,
+    ],
+    name: "PRETTYGARDEN Enterizo de otoño para mujer, estilo casual, elegante, de una pieza, cuello en V, manga larga, bolsillos con cinturón, pantalones largos, mameluco",
+    price: 44.07,
+    stock: 4,
+    subCategories: [
+      { name: "Lujo" }
+    ],
+    companyName: "Carlos Boutique",
+    discount: 8,
+    rating: fillProductRating(clients, comments),
+    status: "publicado",
+  },
 ]
