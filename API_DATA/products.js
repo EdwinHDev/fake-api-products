@@ -327,4 +327,57 @@ export const products = [
     rating: fillProductRating(clients, comments),
     status: "publicado",
   },
+  {
+    _id: uuidv4(),
+    category: "Accesorios del Hogar",
+    characteristics: [
+      {
+        id: uuidv4(),
+        name: "Marca",
+        value: "TOZO"
+      },
+      {
+        id: uuidv4(),
+        name: "Modelo",
+        value: "LA1 Mini"
+      },
+      {
+        id: uuidv4(),
+        name: "Color",
+        value: "Blanco y amarillo"
+      },
+      {
+        id: uuidv4(),
+        name: "Dimensiones del producto",
+        value: "5,9 D x 5,9 Ancho x 5,9 Altura pulgadas"
+      },
+      {
+        id: uuidv4(),
+        name: "Características especiales",
+        value: "Cambio de Color"
+      },
+    ],
+    condition: "nuevo",
+    description: "Impreso en 3D con materiales ecológicos.Toca para cambiar el color (blanco y amarillo) y ajustar el brillo. Mantén presionado para habilitar la función atenuada. Incluye una batería recargable: carga durante 2-3 horas, para un uso de 8-10 horas.",
+    freeShipping: true,
+    images: [
+      `${baseUrl}/images/products/813cmTEIkAL._AC_SX522_.jpg`,
+      `${baseUrl}/images/products/61fLipE+xSL._AC_SX425_.jpg`,
+      `${baseUrl}/images/products/71ZuEVGv8jL._AC_SX425_.jpg`,
+      `${baseUrl}/images/products/81j3S+HwtJL._AC_SX425_.jpg`, 
+      `${baseUrl}/images/products/81esAoQ2NwL._AC_SX425_.jpg`,
+      `${baseUrl}/images/products/51H6eMXJFHS._AC_SX425_.jpg`
+    ],
+    name: "Lámpara de mesa con forma de luna, de Mydethun, luz nocturna para niños, se carga por USB, control táctil de brillo, dos tonos uno cálido y otro blanco frío, gran idea de regalo",
+    price: 50.99,
+    stock: 5,
+    subCategories: [
+      { name: "Lamparas" }
+    ],
+    companyName: "Mydethun",
+    discount: 5,
+    rating: fillProductRating(clients, comments),
+    status: "publicado",
+  },
+
 ]
