@@ -379,5 +379,50 @@ export const products = [
     rating: fillProductRating(clients, comments),
     status: "publicado",
   },
+  {
+    _id: uuidv4(),
+    category: "Videojuegos",
+    characteristics: [
+      {
+        id: uuidv4(),
+        name: "Marca",
+        value: "AMD"
+      },
+      {
+        id: uuidv4(),
+        name: "Modelo de CPU",
+        value: "Ryzen 7"
+      },
+      {
+        id: uuidv4(),
+        name: "Zócalo de CPU",
+        value: "Socket AM5"
+      },
+      {
+        id: uuidv4(),
+        name: "Fabricante de CPU",
+        value: "AMD"
+      },
+    ],
+    condition: "nuevo",
+    description: "El procesador proporciona una ejecución confiable y rápida de tareas con la máxima eficiencia. Frecuencia de gráficos: 2200 MHZ. Número de núcleos de CPU: 8. Temperatura máxima de funcionamiento (Tjmax): 192.2 °F.",
+    freeShipping: true,
+    images: [
+      `${baseUrl}/images/products/51HqC0rU9HL._AC_SX425_.jpg`,
+      `${baseUrl}/images/products/51dOdTAF2gL._AC_SX466_.jpg`,
+      `${baseUrl}/images/products/51mUlXh-JWL._AC_SX466_.jpg`,
+      `${baseUrl}/images/products/61QGWxiaQ4L._AC_SX466_.jpg`, 
+    ],
+    name: "AMD Procesador de escritorio Ryzen 7 7800X3D de 8 núcleos y 16 hilos",
+    price: 383.99,
+    stock: 16,
+    subCategories: [
+      { name: "Procesadores" }
+    ],
+    companyName: "Directo USA",
+    discount: 22,
+    rating: fillProductRating(clients, comments),
+    status: "publicado",
+  },
 
 ]
