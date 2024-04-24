@@ -9,7 +9,7 @@ export function fillProductRating(clientList, comments) {
     star_5: []
   }
 
-  const randomNumber = Math.floor(Math.random() * 100) + 1
+  const randomNumber = Math.floor(Math.random() * 10) + 1
 
   for (let i = 0; i < randomNumber; i++) {
     const start = Math.floor(Math.random() * 5) + 1

@@ -126,6 +126,7 @@ export const products = [
         name: "Marca",
         value: "KKXIU"
       },
+
       {
         id: uuidv4(),
         name: "Color",
@@ -151,6 +152,52 @@ export const products = [
     ],
     companyName: "Siempre lindos",
     discount: 10,
+    rating: fillProductRating(clients, comments),
+    status: "publicado",
+  },
+  {
+    _id: uuidv4(),
+    category: "Telefonos y Tables",
+    characteristics: [
+      {
+        id: uuidv4(),
+        name: "Marca",
+        value: "SAMSUNG"
+      },
+      {
+        id: uuidv4(),
+        name: "Color",
+      },
+      {
+        id: uuidv4(),
+        name: "Capacidad de almacenamiento de memoria",
+        value: "128 GB"
+      },
+      {
+        id: uuidv4(),
+        name: "Tamaño de pantalla",
+        value: "6,7 Pulgadas"
+      },
+    ],
+    condition: "nuevo",
+    description: "6.7 Quad HD+ Dynamic AMOLED 2X, pantalla Infinity-O, 525ppi, 120Hz, HDR10+, 3200x1440 píxeles, 128GB ROM, 12GB RAM, Qualcomm SM8250 Snapdragon 865 5G (7nm+), Octa-core, Adreno 650, batería de 4500mAh ",
+    freeShipping: false,
+    images: [
+      `${baseUrl}/images/products/61BgDOd6ViL._AC_SX425_.jpg`,
+      `${baseUrl}/images/products/51XocCBYpGL._AC_SX425_.jpg`,
+      `${baseUrl}/images/products/51sBXTFry+L._AC_SX425_.jpg`,
+      `${baseUrl}/images/products/61bWUvR8tjS._AC_SX425_.jpg`, 
+      `${baseUrl}/images/products/41YOmpsy2-L._AC_SX425_.jpg`,
+      `${baseUrl}/images/products/51b700dO+-S._AC_SX522_.jpg`
+    ],
+    name: "Samsung Galaxy S20+ 5G 128GB Smartphone totalmente desbloqueado (renovado)",
+    price: 199.00,
+    stock: 12,
+    subCategories: [
+      { name: "Telefonos Inteligentes" }
+    ],
+    companyName: "Nanologic",
+    discount: 35,
     rating: fillProductRating(clients, comments),
     status: "publicado",
   },
