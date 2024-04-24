@@ -424,5 +424,61 @@ export const products = [
     rating: fillProductRating(clients, comments),
     status: "publicado",
   },
-
+  {
+    _id: uuidv4(),
+    category: "Electrodomesticos",
+    characteristics: [
+      {
+        id: uuidv4(),
+        name: "Marca",
+        value: "HCK"
+      },
+      {
+        id: uuidv4(),
+        name: "Capacidad",
+        value: "3,5 Pies cúbicos"
+      },
+      {
+        id: uuidv4(),
+        name: "Configuración",
+        value: "Sin congelador"
+      },
+      {
+        id: uuidv4(),
+        name: "Color",
+        value: "Negro"
+      },
+      {
+        id: uuidv4(),
+        name: "Características especiales",
+        value: "Niseño Cyberpunk, Vidrio bajo E, Estantes ajustables"
+      },
+      {
+        id: uuidv4(),
+        name: "Voltaje",
+        value: "110 Voltios"
+      },
+    ],
+    condition: "nuevo",
+    description: "El procesador proporciona una ejecución confiable y rápida de tareas con la máxima eficiencia. Frecuencia de gráficos: 2200 MHZ. Número de núcleos de CPU: 8. Temperatura máxima de funcionamiento (Tjmax): 192.2 °F.",
+    freeShipping: false,
+    images: [
+      `${baseUrl}/images/products/71p0b362b5L._AC_SX522_.jpg`,
+      `${baseUrl}/images/products/81wGlgPZHlL._AC_SX466_.jpg`,
+      `${baseUrl}/images/products/71FSroKQrYL._AC_SX466_.jpg`,
+      `${baseUrl}/images/products/815iief6wlL._AC_SX466_.jpg`, 
+      `${baseUrl}/images/products/71R50Gd7nPL._AC_SX466_.jpg`, 
+      `${baseUrl}/images/products/81ffgoB4J1L._AC_SX466_.jpg`, 
+    ],
+    name: "HCK Refrigerador de bebidas, Refrigerador de botellas pequeñas con iluminación moderna Cyberpunk, Mini refrigerador 32.0-50.0 °F, Nevera de cerveza 3.5 pies cúbicos, Para sala de juegos, fiesta, negro",
+    price: 699.99,
+    stock: 5,
+    subCategories: [
+      { name: "Neveras" }
+    ],
+    companyName: "Directo USA",
+    discount: 30,
+    rating: fillProductRating(clients, comments),
+    status: "publicado",
+  },
 ]
