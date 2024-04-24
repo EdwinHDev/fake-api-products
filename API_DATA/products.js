@@ -280,4 +280,51 @@ export const products = [
     rating: fillProductRating(clients, comments),
     status: "publicado",
   },
+  {
+    _id: uuidv4(),
+    category: "Accesorios",
+    characteristics: [
+      {
+        id: uuidv4(),
+        name: "Marca",
+        value: "TOZO"
+      },
+      {
+        id: uuidv4(),
+        name: "Modelo",
+        value: "LA1 Mini"
+      },
+      {
+        id: uuidv4(),
+        name: "Color",
+        value: "Negro"
+      },
+      {
+        id: uuidv4(),
+        name: "Conectividad",
+        value: "Bluetooth"
+      },
+    ],
+    condition: "nuevo",
+    description: "Ultraligeros y compatibles con orejas pequeñas: la superficie y el ángulo de la parte intrauditiva de los auriculares A1 han sido pulidos y refinados repetidamente para lograr un equilibrio entre belleza y comodidad y hacer que sean cómodos de llevar. Del mismo modo, un solo auricular pesa solo 0.13 oz, por lo que es tan ligero como una pluma y discreto en la oreja. El diseño ergonómico proporciona un ajuste cómodo y seguro que no sobresale de tus orejas, especialmente para deportes, entrenamiento, gimnasio.",
+    freeShipping: true,
+    images: [
+      `${baseUrl}/images/products/71Sqg+w9bFL._AC_SX569_.jpg`,
+      `${baseUrl}/images/products/81PETt0yg1L._AC_SX569_.jpg`,
+      `${baseUrl}/images/products/61vNXwgFx-L._AC_SX569_.jpg`,
+      `${baseUrl}/images/products/714hUWswHdL._AC_SX569_.jpg`, 
+      `${baseUrl}/images/products/71IbFTwrC-L._AC_SX569_.jpg`,
+      `${baseUrl}/images/products/71f6WD7NTJL._AC_SX569_.jpg`,
+    ],
+    name: "TOZO A1 Mini auriculares inalámbricos Bluetooth de 5.3 pulgadas, micrófono integrado, IPX5 impermeable, sonido inmersivo de alta calidad, conexión de larga distancia con funda de carga, color negro",
+    price: 19.98,
+    stock: 10,
+    subCategories: [
+      { name: "Audifonos" }
+    ],
+    companyName: "Directo de USA",
+    discount: 8,
+    rating: fillProductRating(clients, comments),
+    status: "publicado",
+  },
 ]
