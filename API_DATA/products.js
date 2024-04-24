@@ -167,6 +167,7 @@ export const products = [
       {
         id: uuidv4(),
         name: "Color",
+        value: "Gris"
       },
       {
         id: uuidv4(),
@@ -180,7 +181,7 @@ export const products = [
       },
     ],
     condition: "nuevo",
-    description: "6.7 Quad HD+ Dynamic AMOLED 2X, pantalla Infinity-O, 525ppi, 120Hz, HDR10+, 3200x1440 píxeles, 128GB ROM, 12GB RAM, Qualcomm SM8250 Snapdragon 865 5G (7nm+), Octa-core, Adreno 650, batería de 4500mAh ",
+    description: "6.7 Quad HD+ Dynamic AMOLED 2X, pantalla Infinity-O, 525ppi, 120Hz, HDR10+, 3200x1440 píxeles, 128GB ROM, 12GB RAM, Qualcomm SM8250 Snapdragon 865 5G (7nm+), Octa-core, Adreno 650, batería de 4500mAh",
     freeShipping: false,
     images: [
       `${baseUrl}/images/products/61BgDOd6ViL._AC_SX425_.jpg`,
@@ -198,6 +199,47 @@ export const products = [
     ],
     companyName: "Nanologic",
     discount: 35,
+    rating: fillProductRating(clients, comments),
+    status: "publicado",
+  },
+  {
+    _id: uuidv4(),
+    category: "Electrodomesticos",
+    characteristics: [
+      {
+        id: uuidv4(),
+        name: "Marca",
+        value: "VIZIO"
+      },
+      {
+        id: uuidv4(),
+        name: "Resolución",
+        value: "1080p"
+      },
+      {
+        id: uuidv4(),
+        name: "Aplicaciones",
+        value: "Netflix, Disney+, YouTube, HBO Max"
+      },
+    ],
+    condition: "nuevo",
+    description: "Alta definición de 1080p: mira televisión con una resolución Full HD de 1080p clara y nítida y experimente una imagen brillante con la serie D de VIZIO.",
+    freeShipping: true,
+    images: [
+      `${baseUrl}/images/products/81pL+uVYD3L._AC_SX569_.jpg`,
+      `${baseUrl}/images/products/71pSYE0G7OL._AC_SX569_.jpg`,
+      `${baseUrl}/images/products/71VVumHNPXL._AC_SX569_.jpg`,
+      `${baseUrl}/images/products/71hbD7PcqkL._AC_SX569_.jpg`, 
+      `${baseUrl}/images/products/81++w14+rkL._AC_SX569_.jpg`,
+    ],
+    name: "VIZIO - Smart TV Full HD 1080p de 40 pulgadas con Apple AirPlay y Chromecast integrados, compatibilidad con Alexa, D40f-J09, modelo 2022",
+    price: 148.00,
+    stock: 4,
+    subCategories: [
+      { name: "SmarTV" }
+    ],
+    companyName: "Directo de USA",
+    discount: 15,
     rating: fillProductRating(clients, comments),
     status: "publicado",
   },
