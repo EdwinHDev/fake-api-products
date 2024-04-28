@@ -1,7 +1,101 @@
 import { products } from "../API_DATA/products.js"
 import { shuffle } from "../utils/shuffle.js"
+import { connectDB } from "../db/connection.js"
+import Product from "../models/Product.js"
+
+export const createProduct = async (req, res) => {
+
+  const { category = "", subCategories = "", characteristics = [], condition = "", description = "", freeShipping = false, images = [], name = "", stock = 0, price = 0, companyName = "", discount = 0, rating = {}, status = "" } = req.body
+
+  if(category === "") {
+    return res.status(401).json({ message: "La categoría es requerida." })
+  }
+
+  if(subCategories === "") {
+    return res.status(401).json({ message: "La sub-categoría es requerida." })
+  }
+
+  if(condition === "") {
+    return res.status(401).json({ message: "La condición es requerida." })
+  }
+
+  if(description === "") {
+    return res.status(401).json({ message: "La description es requerida." })
+  }
+
+  if(images.length === 0) {
+    return res.status(401).json({ message: "Las imagenes son requeridas." })
+  }
+
+  if(name === "") {
+    return res.status(401).json({ message: "El nombre es requerido." })
+  }
+
+  if(stock === 0) {
+    return res.status(401).json({ message: "El stock es requerido." })
+  }
+
+  if(price === 0) {
+    return res.status(401).json({ message: "El precio es requerido." })
+  }
+
+  if(companyName === "") {
+    return res.status(401).json({ message: "El nombre de la empresa es requerido." })
+  }
+
+  if(discount === 0) {
+    return res.status(401).json({ message: "El descuento es requerido." })
+  }
+
+  if(status === "") {
+    return res.status(401).json({ message: "El estatus es requerido." })
+  }
+
+  const newProduct = new Product({
+    category,
+    subCategories,
+    characteristics,
+    condition,
+    description,
+    freeShipping,
+    images,
+    name,
+    stock,
+    price,
+    companyName,
+    discount,
+    rating,
+    status
+  })
+
+  await connectDB();
+
+  try {
+    await newProduct.save();
+    res.json({ message: "Producto creado correctamente" })
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: "Algo salio mal" })
+  }
+}
 
 export const getProducts = async (req, res) => {
-  const ramdomProducts = shuffle(products);
-  res.json(ramdomProducts)
+  
+  await connectDB();
+  const products = await Product.find()
+
+  if(products.length === 0) {
+    return res.json({ message: "No hay productos para mostrar" })
+  }
+
+  return res.json(products)
+
+}
+
+export const getProductById = async (req, res) => {
+  const { id } = req.params
+  const productById = products.filter(product => product._id.toString() === id)[0]
+
+  if(!productById) return res.status(404).json({ error: true, message: "El producto que buscas, no existe." })
+  res.json(productById)
 }

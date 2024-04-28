@@ -1,7 +1,6 @@
 import { fillProductRating } from "../utils/ramdomRating.js"
 import { clients, comments } from "../API_DATA/rating.js"
 import dotenv from "dotenv"
-import { v4 as uuidv4 } from 'uuid'
 
 dotenv.config()
 
@@ -9,21 +8,21 @@ const baseUrl = process.env.BASE_URL;
 
 export const products = [
   {
-    _id: uuidv4(),
+    _id: 1,
     category: "Gaming",
     characteristics: [
       {
-        id: uuidv4(),
+        id: 1,
         name: "Marca",
         value: "AutoFull"
       },
       {
-        id: uuidv4(),
+        id: 2,
         name: "Color",
         value: "Negro, Blanco, Gris"
       },
       {
-        id: uuidv4(),
+        id: 3,
         name: "Dimensiones del producto",
         value: "20,07'D x 20,07'Ancho x 50,78'Altura pulgadas"
       },
@@ -51,36 +50,36 @@ export const products = [
     status: "publicado",
   },
   {
-    _id: uuidv4(),
+    _id: 2,
     category: "Accesorios",
     characteristics: [
       {
-        id: uuidv4(),
+        id: 1,
         name: "Marca",
         value: "Fitbit"
       },
       {
-        id: uuidv4(),
+        id: 2,
         name: "Fabricante",
         value: "Fitbit Inc"
       },
       {
-        id: uuidv4(),
+        id: 3,
         name: "Peso",
         value: "180 Gramos"
       },
       {
-        id: uuidv4(),
+        id: 4,
         name: "Color",
         value: "Negro/Grafito"
       },
       {
-        id: uuidv4(),
+        id: 5,
         name: "GPS",
         value: "Built-in GPS"
       },
       {
-        id: uuidv4(),
+        id: 6,
         name: "OS",
         value: "ios"
       },
@@ -108,27 +107,27 @@ export const products = [
     status: "publicado",
   },
   {
-    _id: uuidv4(),
+    _id: 3,
     category: "Accesorios",
     characteristics: [
       {
-        id: uuidv4(),
+        id: 1,
         name: "Tipo de tejido",
         value: "Cuero vegano"
       },
       {
-        id: uuidv4(),
+        id: 2,
         name: "Tipo de cierre",
         value: "Cremallera"
       },
       {
-        id: uuidv4(),
+        id: 3,
         name: "Marca",
         value: "KKXIU"
       },
 
       {
-        id: uuidv4(),
+        id: 4,
         name: "Color",
         value: "Rosa"
       },
@@ -156,26 +155,26 @@ export const products = [
     status: "publicado",
   },
   {
-    _id: uuidv4(),
+    _id: 4,
     category: "Telefonos y Tables",
     characteristics: [
       {
-        id: uuidv4(),
+        id: 1,
         name: "Marca",
         value: "SAMSUNG"
       },
       {
-        id: uuidv4(),
+        id: 2,
         name: "Color",
         value: "Gris"
       },
       {
-        id: uuidv4(),
+        id: 3,
         name: "Capacidad de almacenamiento de memoria",
         value: "128 GB"
       },
       {
-        id: uuidv4(),
+        id: 4,
         name: "Tamaño de pantalla",
         value: "6,7 Pulgadas"
       },
@@ -203,21 +202,21 @@ export const products = [
     status: "publicado",
   },
   {
-    _id: uuidv4(),
+    _id: 5,
     category: "Electrodomesticos",
     characteristics: [
       {
-        id: uuidv4(),
+        id: 1,
         name: "Marca",
         value: "VIZIO"
       },
       {
-        id: uuidv4(),
+        id: 2,
         name: "Resolución",
         value: "1080p"
       },
       {
-        id: uuidv4(),
+        id: 3,
         name: "Aplicaciones",
         value: "Netflix, Disney+, YouTube, HBO Max"
       },
@@ -244,16 +243,16 @@ export const products = [
     status: "publicado",
   },
   {
-    _id: uuidv4(),
+    _id: 6,
     category: "Ropa",
     characteristics: [
       {
-        id: uuidv4(),
+        id: 1,
         name: "Tipo de tejido",
         value: "100% poliéster"
       },
       {
-        id: uuidv4(),
+        id: 2,
         name: "Cuidados",
         value: "Lavado a Máquina"
       },
@@ -281,26 +280,26 @@ export const products = [
     status: "publicado",
   },
   {
-    _id: uuidv4(),
+    _id: 7,
     category: "Accesorios",
     characteristics: [
       {
-        id: uuidv4(),
+        id: 1,
         name: "Marca",
         value: "TOZO"
       },
       {
-        id: uuidv4(),
+        id: 2,
         name: "Modelo",
         value: "LA1 Mini"
       },
       {
-        id: uuidv4(),
+        id: 3,
         name: "Color",
         value: "Negro"
       },
       {
-        id: uuidv4(),
+        id: 4,
         name: "Conectividad",
         value: "Bluetooth"
       },
@@ -328,31 +327,31 @@ export const products = [
     status: "publicado",
   },
   {
-    _id: uuidv4(),
+    _id: 8,
     category: "Accesorios del Hogar",
     characteristics: [
       {
-        id: uuidv4(),
+        id: 1,
         name: "Marca",
         value: "TOZO"
       },
       {
-        id: uuidv4(),
+        id: 2,
         name: "Modelo",
         value: "LA1 Mini"
       },
       {
-        id: uuidv4(),
+        id: 3,
         name: "Color",
         value: "Blanco y amarillo"
       },
       {
-        id: uuidv4(),
+        id: 4,
         name: "Dimensiones del producto",
         value: "5,9 D x 5,9 Ancho x 5,9 Altura pulgadas"
       },
       {
-        id: uuidv4(),
+        id: 5,
         name: "Características especiales",
         value: "Cambio de Color"
       },
@@ -380,26 +379,26 @@ export const products = [
     status: "publicado",
   },
   {
-    _id: uuidv4(),
+    _id: 9,
     category: "Videojuegos",
     characteristics: [
       {
-        id: uuidv4(),
+        id: 1,
         name: "Marca",
         value: "AMD"
       },
       {
-        id: uuidv4(),
+        id: 2,
         name: "Modelo de CPU",
         value: "Ryzen 7"
       },
       {
-        id: uuidv4(),
+        id: 3,
         name: "Zócalo de CPU",
         value: "Socket AM5"
       },
       {
-        id: uuidv4(),
+        id: 4,
         name: "Fabricante de CPU",
         value: "AMD"
       },
@@ -425,36 +424,36 @@ export const products = [
     status: "publicado",
   },
   {
-    _id: uuidv4(),
+    _id: 10,
     category: "Electrodomesticos",
     characteristics: [
       {
-        id: uuidv4(),
+        id: 1,
         name: "Marca",
         value: "HCK"
       },
       {
-        id: uuidv4(),
+        id: 2,
         name: "Capacidad",
         value: "3,5 Pies cúbicos"
       },
       {
-        id: uuidv4(),
+        id: 3,
         name: "Configuración",
         value: "Sin congelador"
       },
       {
-        id: uuidv4(),
+        id: 4,
         name: "Color",
         value: "Negro"
       },
       {
-        id: uuidv4(),
+        id: 5,
         name: "Características especiales",
         value: "Niseño Cyberpunk, Vidrio bajo E, Estantes ajustables"
       },
       {
-        id: uuidv4(),
+        id: 6,
         name: "Voltaje",
         value: "110 Voltios"
       },
