@@ -89,13 +89,17 @@ export const getProducts = async (req, res) => {
   }
 
   return res.json(products)
-
 }
 
 export const getProductById = async (req, res) => {
   const { id } = req.params
-  const productById = products.filter(product => product._id.toString() === id)[0]
 
-  if(!productById) return res.status(404).json({ error: true, message: "El producto que buscas, no existe." })
-  res.json(productById)
+  await connectDB();
+  const product = await Product.findById(id)
+
+  if(!products) {
+    return res.status(404).json({ message: "No existe un producto con esa id." })
+  }
+  
+  return res.json(product)
 }
