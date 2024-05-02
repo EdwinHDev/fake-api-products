@@ -1,4 +1,6 @@
+import {deleteAsync} from 'del'
 import dotenv from "dotenv"
+import { existsSync } from "fs"
 
 dotenv.config()
 
@@ -46,5 +48,21 @@ export const uploadFile = async (req, res) => {
       type: file.mimetype,
       url: process.env.BASE_URL+"/"+file.name
     })
+  }
+}
+
+export const deleteFile = async (req, res) => {
+
+  const { name } = req.params
+
+  if(!existsSync(`uploads/${name}`)) {
+    return res.status(401).json({ message: "No existe ese archivo" })
+  }
+
+  try {
+    await deleteAsync(['uploads/*', `!${name}`]);
+    res.json({ message: "Archivo eliminado correctamente" })
+  } catch (error) {
+    return res.status(500).json({ message: "Algo salio mal" })
   }
 }
