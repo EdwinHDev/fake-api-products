@@ -8,15 +8,13 @@ import fileUpload from "express-fileupload"
 const app = express()
 app.use(express.json())
 
-app.use(cors())
-
 app.use(fileUpload({
   createParentPath: true
 }))
 
-app.use('/', mainRoutes)
-app.use('/api/products', productRoutes)
-app.use('/api/upload', uploadRoutes)
+app.use('/', cors(), mainRoutes)
+app.use('/api/products', cors(), productRoutes)
+app.use('/api/upload', cors(), uploadRoutes)
 
 app.use(express.static('public'))
 app.use(express.static('uploads'))
