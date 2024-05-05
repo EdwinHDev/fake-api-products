@@ -13,7 +13,7 @@ export const uploadFile = async (req, res) => {
   };
 
   if (!req.files || Object.keys(req.files).length === 0) {
-    return res.status(400).send('No se recibieron imagenes')
+    return res.status(400).json({ error: 'No se recibieron imagenes' });
   }
 
   let resArr = []
