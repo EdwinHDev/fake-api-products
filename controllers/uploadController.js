@@ -6,13 +6,14 @@ dotenv.config()
 
 export const uploadFile = async (req, res) => {
 
+
   const types = ["image/png", "image/jpeg", "image/jpg", "image/webp"]
   const validImages = (mimetype) => {
     return types.includes(mimetype)
   };
 
   if (!req.files || Object.keys(req.files).length === 0) {
-    return res.status(400).json({ error: 'No se recibieron imagenes' });
+    return res.status(400).send('No se recibieron imagenes')
   }
 
   let resArr = []
