@@ -1,10 +1,23 @@
 import {deleteAsync} from 'del'
 import dotenv from "dotenv"
-import { existsSync } from "fs"
+import { existsSync, mkdirSync } from "fs"
 
 dotenv.config()
 
 export const uploadFile = async (req, res) => {
+
+  const uploadDir = './uploads';
+
+  // Verificar si el directorio de carga existe
+  if (!existsSync(uploadDir)) {
+    // Si no existe, intenta crearlo
+    try {
+      mkdirSync(uploadDir);
+      console.log('Directorio de carga creado correctamente.');
+    } catch (err) {
+      console.error('Error al crear el directorio de carga:', err);
+    }
+  }
 
   // Verificar si se enviaron archivos
   if (!req.files || req.files.length === 0) {
