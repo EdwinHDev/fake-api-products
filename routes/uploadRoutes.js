@@ -2,8 +2,22 @@ import express from "express"
 import multer from "multer"
 import path from "path";
 import { uploadFile, deleteFile } from "../controllers/uploadController.js"
+import { existsSync, mkdirSync } from "fs"
 
 const router = express.Router()
+
+const uploadDir = './uploads';
+
+// Verificar si el directorio de carga existe
+if (!existsSync(uploadDir)) {
+  // Si no existe, intenta crearlo
+  try {
+    mkdirSync(uploadDir);
+    console.log('Directorio de carga creado correctamente.');
+  } catch (err) {
+    console.error('Error al crear el directorio de carga:', err);
+  }
+}
 
 // Configuración de Multer
 const storage = multer.diskStorage({

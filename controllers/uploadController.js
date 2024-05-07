@@ -6,19 +6,6 @@ dotenv.config()
 
 export const uploadFile = async (req, res) => {
 
-  const uploadDir = './uploads';
-
-  // Verificar si el directorio de carga existe
-  if (!existsSync(uploadDir)) {
-    // Si no existe, intenta crearlo
-    try {
-      mkdirSync(uploadDir);
-      console.log('Directorio de carga creado correctamente.');
-    } catch (err) {
-      console.error('Error al crear el directorio de carga:', err);
-    }
-  }
-
   // Verificar si se enviaron archivos
   if (!req.files || req.files.length === 0) {
     return res.status(400).json({ error: 'No se han enviado archivos.' });
