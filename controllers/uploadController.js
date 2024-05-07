@@ -6,37 +6,21 @@ dotenv.config()
 
 export const uploadFile = async (req, res) => {
 
-
-  const types = ["image/png", "image/jpeg", "image/jpg", "image/webp"]
-  const validImages = (mimetype) => {
-    return types.includes(mimetype)
-  };
-
-  if (!req.files || Object.keys(req.files).length === 0) {
-    return res.status(400).json({ error: 'No se recibieron imagenes' });
+  // Verificar si se enviaron archivos
+  if (!req.files || req.files.length === 0) {
+    return res.status(400).json({ error: 'No se han enviado archivos.' });
   }
 
-  let resArr = []
-  for (let nameField in req.files) {
-    const images = Array.isArray(req.files[nameField]) ? req.files[nameField] : [req.files[nameField]];
+  // Array donde almacenaremos las URLs de las imágenes cargadas
+  const urls = [];
 
-    images.forEach(file => {
-      if (!validImages(file.mimetype)) {
-        return res.status(400).json({ error: 'El archivo no es una imagen PNG, WEBP, JPG o JPEG' });
-      }
+  // Iteramos sobre los archivos cargados y construimos las URLs
+  req.files.forEach(file => {
+    urls.push(req.protocol + '://' + req.get('host') + '/uploads/' + file.filename);
+  });
 
-      file.mv("./uploads/"+file.name)
-
-      resArr.push({
-        name: file.name,
-        size: file.size,
-        type: file.mimetype,
-        url: process.env.BASE_URL+"/"+file.name
-      })
-    });
-  }
-
-  return res.json(resArr)
+  // Devolvemos las URLs al usuario
+  res.json({ urls: urls });
 }
 
 export const deleteFile = async (req, res) => {
