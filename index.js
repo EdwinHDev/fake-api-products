@@ -20,8 +20,8 @@ app.use('/api/products', productRoutes)
 app.use('/api/upload', uploadRoutes)
 
 app.use(express.static('public'))
-// app.use(express.static('uploads'))
-app.use('/uploads', express.static('uploads'));
+app.use(express.static('uploads'))
+// app.use('/uploads', express.static('uploads'));
 
 const PORT = process.env.PORT || 4000
 
